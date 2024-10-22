@@ -6,17 +6,20 @@ class Button extends StatelessWidget {
   final String title;
   final Color? backgroudcolor;
   final Color? textColor;
+
+  final dynamic onPressed;
   const Button(
       {super.key,
       required this.title,
       this.backgroudcolor = redColor,
-      this.textColor});
+      this.textColor,
+      this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(backgroudcolor),
+          backgroundColor: WidgetStateProperty.all(backgroudcolor),
           padding: WidgetStateProperty.all(
             EdgeInsets.symmetric(
               horizontal: getSize(context).width * 0.32,
@@ -31,7 +34,7 @@ class Button extends StatelessWidget {
         ),
         onPressed: () {},
         child: SizedBox(
-          width: getSize(context).width * 0.2,
+          width: getSize(context).width * 0.18,
           child: Center(
             child: Text(
               title,

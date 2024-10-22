@@ -1,5 +1,7 @@
 import 'package:esafy/helpers/const.dart';
 import 'package:esafy/helpers/get_size.dart';
+import 'package:esafy/screens/login_screen.dart';
+import 'package:esafy/screens/register_screen.dart';
 import 'package:esafy/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,49 +46,35 @@ class WelcomScreen extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          SizedBox(height: 30),
-          // Options List
-          Column(
-            children: [
-              optionItem("Be a hero "),
-              optionItem("Be a man"),
-              optionItem("Dont be a coward"),
-              optionItem("Call for an ambulance"),
-            ],
-          ),
-          SizedBox(height: 30),
+          const SizedBox(height: 1),
           // Buttons
-          const Button(
+          Button(
             title: "Login",
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LoginScreen(),
+                ),
+              );
+            },
             backgroudcolor: redColor,
             textColor: white,
           ),
           const SizedBox(height: 20),
-          const Button(
+          Button(
             title: "Register",
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const RegisterScreen(),
+                ),
+              );
+            },
             backgroudcolor: white,
             textColor: redColor,
           )
-        ],
-      ),
-    );
-  }
-
-  Widget optionItem(String text) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 5),
-      child: Row(
-        children: [
-          SizedBox(width: 20),
-          Icon(Icons.local_hospital, color: Colors.red),
-          SizedBox(width: 10),
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-            ),
-          ),
         ],
       ),
     );

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:esafy/helpers/const.dart';
-import 'package:esafy/screens/register_screen.dart';
 import 'package:esafy/screens/welcom_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => const RegisterScreen()));
+          MaterialPageRoute(builder: (context) => const WelcomScreen()));
     });
     super.initState();
   }
