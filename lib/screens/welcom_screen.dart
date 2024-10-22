@@ -1,5 +1,4 @@
 import 'package:esafy/helpers/const.dart';
-import 'package:esafy/helpers/get_size.dart';
 import 'package:esafy/screens/login_screen.dart';
 import 'package:esafy/screens/register_screen.dart';
 import 'package:esafy/widgets/button.dart';
@@ -21,7 +20,7 @@ class WelcomScreen extends StatelessWidget {
               Image.asset("assets/chipShapeW.png"),
               Center(
                 heightFactor: 1.4,
-                child: SvgPicture.asset('assets/icons/ambulanceLogo.svg'),
+                child: SvgPicture.asset('assets/icons/ambulanceLogo.svg')
               ),
               const Center(
                 heightFactor: 6,

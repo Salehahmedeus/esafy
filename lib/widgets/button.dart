@@ -7,13 +7,13 @@ class Button extends StatelessWidget {
   final Color? backgroudcolor;
   final Color? textColor;
 
-  final dynamic onPressed;
+  final Function onPressed;
   const Button(
       {super.key,
       required this.title,
       this.backgroudcolor = redColor,
       this.textColor,
-      this.onPressed});
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,7 @@ class Button extends StatelessWidget {
               horizontal: getSize(context).width * 0.32,
               vertical: getSize(context).height * 0.020,
             ),
+            
           ),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
@@ -32,9 +33,11 @@ class Button extends StatelessWidget {
                 side: const BorderSide(color: redColor, width: 2)),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          onPressed();
+        },
         child: SizedBox(
-          width: getSize(context).width * 0.18,
+          width: getSize(context).width * 0.30,
           child: Center(
             child: Text(
               title,

@@ -21,9 +21,9 @@ class Directions {
     if (map['routes'] == null || (map['routes'] as List).isEmpty) {
       return Directions(
         bounds: LatLngBounds(
-          northeast: LatLng(
+          northeast: const LatLng(
               0, 0), // Use default values or handle this case appropriately
-          southwest: LatLng(0, 0),
+          southwest: const LatLng(0, 0),
         ),
         polylinePoints: [],
         totalDistance: '0',

@@ -13,10 +13,10 @@ class CustomBottomBar extends StatelessWidget {
           // Add your custom action here
         },
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -24,13 +24,13 @@ class CustomBottomBar extends StatelessWidget {
               onPressed: () {
                 // Home button action
               },
-              icon: Icon(Icons.home, color: Colors.amber),
+              icon: const Icon(Icons.home, color: Colors.amber),
             ),
             IconButton(
               onPressed: () {
                 // Settings button action
               },
-              icon: Icon(Icons.settings, color: Colors.black45),
+              icon: const Icon(Icons.settings, color: Colors.black45),
             ),
           ],
         ),
