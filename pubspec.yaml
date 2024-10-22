@@ -28,8 +28,16 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  dio:
+  flutter_polyline_points:
+  google_maps_flutter:
+  map_location_picker:
+  geolocator:
+  location:
+  google_maps_routes:
   flutter:
     sdk: flutter
+  
   flutter_svg:
   font_awesome_flutter:
 
