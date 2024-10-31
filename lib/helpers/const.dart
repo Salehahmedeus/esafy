@@ -16,3 +16,8 @@ TextStyle titleBold = const TextStyle(
     color: Colors.white,
     height: 0,
     fontFamily: 'Roboto');
+
+//---------------------------
+
+String googleApiKey = 'AIzaSyD2MoXkfP1yIx1zScFQn14FbVDy-V5No9s';
+

@@ -8,12 +8,13 @@ class CustomBottomBar extends StatelessWidget {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
         onPressed: () {
           // Add your custom action here
         },
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add)
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),

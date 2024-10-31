@@ -175,6 +175,7 @@
 
 import 'package:esafy/googlemaps/diractions_repo.dart';
 import 'package:esafy/googlemaps/directions.dart';
+import 'package:esafy/widgets/clickable/circular_navbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -314,7 +315,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       )),
-                //const CustomBottomBar()
               ],
             ),
       floatingActionButton: FloatingActionButton(
@@ -331,6 +331,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: const Icon(Icons.center_focus_strong),
       ),
+      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }

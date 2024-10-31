@@ -1,10 +1,10 @@
 import 'package:esafy/helpers/const.dart';
 import 'package:esafy/helpers/get_size.dart';
 import 'package:esafy/providers/auth_provider.dart';
-import 'package:esafy/screens/login_screen.dart';
+import 'package:esafy/screens/authscreens/login_screen.dart';
 import 'package:esafy/screens/welcom_screen.dart';
-import 'package:esafy/widgets/button.dart';
-import 'package:esafy/widgets/custom_text_field.dart';
+import 'package:esafy/widgets/clickable/button.dart';
+import 'package:esafy/widgets/clickable/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -1,6 +1,6 @@
 import 'package:esafy/providers/auth_provider.dart';
 import 'package:esafy/providers/base_provider.dart';
-import 'package:esafy/screens/splash_screen.dart';
+import 'package:esafy/screens/authscreens/splash_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

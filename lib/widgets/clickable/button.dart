@@ -25,7 +25,6 @@ class Button extends StatelessWidget {
               horizontal: getSize(context).width * 0.32,
               vertical: getSize(context).height * 0.020,
             ),
-            
           ),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(

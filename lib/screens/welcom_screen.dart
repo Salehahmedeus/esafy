@@ -1,7 +1,7 @@
 import 'package:esafy/helpers/const.dart';
-import 'package:esafy/screens/login_screen.dart';
-import 'package:esafy/screens/register_screen.dart';
-import 'package:esafy/widgets/button.dart';
+import 'package:esafy/screens/authscreens/login_screen.dart';
+import 'package:esafy/screens/authscreens/register_screen.dart';
+import 'package:esafy/widgets/clickable/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
