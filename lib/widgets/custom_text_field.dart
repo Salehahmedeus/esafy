@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {super.key,
+      required this.validator,
       required this.label,
       this.suffixIcon,
       this.prefixIcon,
+      this.obSecure = false,
       this.fontSize = 24,
       this.fontWeight = FontWeight.w500,
       this.isEnabled = true,
-      required this.controller});
+      required this.controller,
+      required this.onTap});
 
   final String label;
   final double? fontSize;
@@ -17,7 +20,11 @@ class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final FontWeight fontWeight;
   final bool isEnabled;
+  final bool obSecure;
+  final Function onTap;
+
   final TextEditingController controller;
+  final FormFieldValidator<String?> validator;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +45,12 @@ class CustomTextField extends StatelessWidget {
             height: 10,
           ),
           TextFormField(
+            onTap: () {
+              onTap();
+            },
+            obscureText: obSecure,
             controller: controller,
+            validator: validator,
             enabled: isEnabled,
             decoration: InputDecoration(
               enabledBorder: OutlineInputBorder(

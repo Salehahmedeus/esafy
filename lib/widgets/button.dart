@@ -7,13 +7,14 @@ class Button extends StatelessWidget {
   final Color? backgroudcolor;
   final Color? textColor;
 
-  final dynamic onPressed;
+  final Function onPressed;
   const Button(
       {super.key,
       required this.title,
       this.backgroudcolor = redColor,
       this.textColor,
-      this.onPressed});
+      required this.onPressed,
+      Null Function()? onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -32,9 +33,11 @@ class Button extends StatelessWidget {
                 side: const BorderSide(color: redColor, width: 2)),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          onPressed();
+        },
         child: SizedBox(
-          width: getSize(context).width * 0.18,
+          width: getSize(context).width * 0.22,
           child: Center(
             child: Text(
               title,

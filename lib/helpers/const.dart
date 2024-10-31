@@ -1,7 +1,7 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+const kMainColor = Color(0xffF83648);
 const Color redColor = Color(0xffF83648);
 const Color cream = Color(0xffFFDF90);
 const Color white = Color(0xffffffff);
@@ -17,3 +17,5 @@ TextStyle titleBold = const TextStyle(
     color: Colors.white,
     height: 0,
     fontFamily: 'Roboto');
+
+String googleApiKey = 'AIzaSyD2MoXkfP1yIx1zScFQn14FbVDy-V5No9s';

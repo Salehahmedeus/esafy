@@ -1,5 +1,4 @@
 import 'package:esafy/helpers/const.dart';
-import 'package:esafy/helpers/get_size.dart';
 import 'package:esafy/screens/login_screen.dart';
 import 'package:esafy/screens/register_screen.dart';
 import 'package:esafy/widgets/button.dart';
@@ -16,37 +15,128 @@ class WelcomScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Stack(
-            children: [
-              Image.asset("assets/chipShapeW.png"),
-              Center(
-                heightFactor: 1.4,
-                child: SvgPicture.asset('assets/icons/ambulanceLogo.svg'),
+          Container(
+            height: 330,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/chipShapeW.png"),
+                fit: BoxFit.fill,
               ),
-              const Center(
-                heightFactor: 6,
-                child: Text(
-                  'Esafy',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 64,
-                    fontFamily: 'Roboto',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
+            ),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    'assets/icons/ambulanceLogo.svg',
+                    height: 132.54,
                   ),
-                ),
-              )
-            ],
-          ),
-          const Text(
-            'Esafy',
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+                  const Text(
+                    'Esafy',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 64,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w500,
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-          const SizedBox(height: 1),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 60,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Image.asset(
+                      'assets/icons/welcomeIcon.png',
+                      height: 36.23,
+                      width: 36.94,
+                    ),
+                  ),
+                  const Text(
+                    'SOS Emergency Request ',
+                    style: TextStyle(
+                      color: Color(0xFF10112B),
+                      fontSize: 18,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w500,
+                      height: 0,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Image.asset(
+                  'assets/icons/welcomeIcon.png',
+                  height: 36.23,
+                  width: 36.94,
+                ),
+              ),
+              const Text(
+                'Notify Passerby ',
+                style: TextStyle(
+                  color: Color(0xFF10112B),
+                  fontSize: 18,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  height: 0,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Image.asset(
+                  'assets/icons/welcomeIcon.png',
+                  height: 36.23,
+                  width: 36.94,
+                ),
+              ),
+              const Text(
+                'Deaf Special Needs feature ',
+                style: TextStyle(
+                  color: Color(0xFF10112B),
+                  fontSize: 18,
+                  fontFamily: 'Roboto',
+                  fontWeight: FontWeight.w500,
+                  height: 0,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 64),
           // Buttons
           Button(
             title: "Login",
@@ -61,7 +151,7 @@ class WelcomScreen extends StatelessWidget {
             backgroudcolor: redColor,
             textColor: white,
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 12),
           Button(
             title: "Register",
             onPressed: () {
@@ -74,7 +164,7 @@ class WelcomScreen extends StatelessWidget {
             },
             backgroudcolor: white,
             textColor: redColor,
-          )
+          ),
         ],
       ),
     );
