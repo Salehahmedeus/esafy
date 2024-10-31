@@ -1,5 +1,5 @@
-import 'package:esafy/google_maps/direcions_repo.dart';
-import 'package:esafy/google_maps/directions.dart';
+import 'package:esafy/googlemaps/diractions_repo.dart';
+import 'package:esafy/googlemaps/directions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';

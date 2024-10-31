@@ -2,17 +2,15 @@ import 'dart:convert';
 
 class Ambulancemodel {
   String id;
-  String drivername;
-  String driverphone;
-  String availability;
-  String location;
+  String status;
+  String latitude;
+  String longitude;
 
   Ambulancemodel({
     required this.id,
-    required this.drivername,
-    required this.driverphone,
-    required this.availability,
-    required this.location,
+    required this.status,
+    required this.latitude,
+    required this.longitude,
   });
 
   factory Ambulancemodel.fromRawJson(String str) =>
@@ -22,17 +20,15 @@ class Ambulancemodel {
 
   factory Ambulancemodel.fromJson(Map<String, dynamic> json) => Ambulancemodel(
         id: json["id"],
-        drivername: json["drivername"],
-        driverphone: json["driverphone"],
-        availability: json["availability"],
-        location: json["location"],
+        status: json["status"],
+        latitude: json["latitude"],
+        longitude: json["longitude"],
       );
 
   Map<String, dynamic> toJson() => {
         "id": id,
-        "drivername": drivername,
-        "driverphone": driverphone,
-        "availability": availability,
-        "location": location,
+        "status": status,
+        "latitude": latitude,
+        "longitude": longitude,
       };
 }
