@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:esafy/helpers/const.dart';
 import 'package:esafy/screens/mainscreens/home.dart';
-import 'package:esafy/screens/welcom_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

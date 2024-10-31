@@ -58,7 +58,7 @@ class _RegisterScreenState extends State<LoginScreen> {
                                 Navigator.push(
                                     context,
                                     CupertinoPageRoute(
-                                        builder: (context) => WelcomScreen()));
+                                        builder: (context) => const WelcomScreen()));
                               },
                               child: Container(
                                   decoration: const BoxDecoration(
@@ -160,7 +160,7 @@ class _RegisterScreenState extends State<LoginScreen> {
                               Navigator.push(
                                   context,
                                   CupertinoPageRoute(
-                                      builder: (context) => HomeScreen()));
+                                      builder: (context) => const HomeScreen()));
                             } else {
                               ScaffoldMessenger.of(context)
                                   .showSnackBar(SnackBar(
