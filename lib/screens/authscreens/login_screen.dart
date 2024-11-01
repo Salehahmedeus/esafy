@@ -2,7 +2,6 @@ import 'package:esafy/helpers/const.dart';
 import 'package:esafy/helpers/get_size.dart';
 import 'package:esafy/providers/auth_provider.dart';
 import 'package:esafy/screens/mainscreens/home.dart';
-import 'package:esafy/screens/authscreens/register_screen.dart';
 import 'package:esafy/screens/welcom_screen.dart';
 import 'package:esafy/widgets/clickable/button.dart';
 import 'package:esafy/widgets/clickable/custom_text_field.dart';
