@@ -2,19 +2,17 @@ import 'dart:convert';
 
 class Usermodel {
   String id;
-  String name;
   String phone;
   DateTime dob;
-  String gender;
-  String location;
+  String latitude;
+  String longitude;
 
   Usermodel({
     required this.id,
-    required this.name,
     required this.phone,
     required this.dob,
-    required this.gender,
-    required this.location,
+    required this.latitude,
+    required this.longitude,
   });
 
   factory Usermodel.fromRawJson(String str) =>
@@ -24,20 +22,18 @@ class Usermodel {
 
   factory Usermodel.fromJson(Map<String, dynamic> json) => Usermodel(
         id: json["id"],
-        name: json["name"],
         phone: json["phone"],
         dob: DateTime.parse(json["DOB"]),
-        gender: json["gender"],
-        location: json["location"],
+        latitude: json["latitude"],
+        longitude: json["longitude"],
       );
 
   Map<String, dynamic> toJson() => {
         "id": id,
-        "name": name,
         "phone": phone,
         "DOB":
             "${dob.year.toString().padLeft(4, '0')}-${dob.month.toString().padLeft(2, '0')}-${dob.day.toString().padLeft(2, '0')}",
-        "gender": gender,
-        "location": location,
+        "latitude": latitude,
+        "longitude": longitude,
       };
 }

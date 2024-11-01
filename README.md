@@ -7,3 +7,5 @@ Key Features
 Fast Response: Ensures quick dispatching of ambulances to emergencies.
 Deaf People Support: Includes features that assist users who are Deaf or hard of hearing in alerting emergency services effectively.
 Nearby Alert System: Notifies nearby users to improve response efficiency and provide assistance when an emergency arises nearby.
+
+
