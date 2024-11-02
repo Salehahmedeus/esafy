@@ -1,4 +1,4 @@
-import 'package:esafy/google_maps/direcions_repo.dart';
+import 'package:esafy/google_maps/directions_repo.dart';
 import 'package:esafy/google_maps/directions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
