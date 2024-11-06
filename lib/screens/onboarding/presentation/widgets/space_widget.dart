@@ -1,8 +1,8 @@
 import 'package:esafy/helpers/get_size.dart';
 import 'package:flutter/material.dart';
 
-class horizintalSpace extends StatelessWidget {
-  const horizintalSpace(int i, {super.key, this.value});
+class HorizintalSpace extends StatelessWidget {
+  const HorizintalSpace(int i, {super.key, this.value});
   final double? value;
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class horizintalSpace extends StatelessWidget {
   }
 }
 
-class verticalSpace extends StatelessWidget {
-  const verticalSpace({super.key, this.value});
+class VerticalSpace extends StatelessWidget {
+  const VerticalSpace({super.key, this.value});
   final double? value;
   @override
   Widget build(BuildContext context) {

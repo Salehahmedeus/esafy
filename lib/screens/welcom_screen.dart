@@ -48,6 +48,7 @@ class WelcomScreen extends StatelessWidget {
               ),
             ),
           ),
+          
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -141,7 +142,7 @@ class WelcomScreen extends StatelessWidget {
           Button(
             title: "Login",
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const LoginScreen(),
@@ -155,7 +156,7 @@ class WelcomScreen extends StatelessWidget {
           Button(
             title: "Register",
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => const RegisterScreen(),

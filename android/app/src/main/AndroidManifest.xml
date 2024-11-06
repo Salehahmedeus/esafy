@@ -1,5 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:label="esafy"
         android:name="${applicationName}"
@@ -31,8 +30,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-            <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyD2MoXkfP1yIx1zScFQn14FbVDy-V5No9s"/>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
@@ -45,6 +42,4 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
-     
-    
 </manifest>

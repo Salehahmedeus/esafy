@@ -1,9 +1,9 @@
 import 'package:esafy/helpers/const.dart';
 import 'package:esafy/helpers/get_size.dart';
+import 'package:esafy/screens/home_screen.dart';
 import 'package:esafy/screens/onboarding/presentation/widgets/custom_button.dart';
 import 'package:esafy/screens/onboarding/presentation/widgets/animated_custom_indicator.dart';
 import 'package:esafy/screens/onboarding/presentation/widgets/custom_page_view.dart';
-import 'package:esafy/screens/welcom_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -56,25 +56,34 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             child: Positioned(
               top: getSize(context).height * 0.075,
               right: getSize(context).width * 0.08,
-              child: Container(
-                width: 61,
-                height: 50,
-                decoration: ShapeDecoration(
-                  color: white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+              child: GestureDetector(
+                onTap: () {
+                  pageController?.animateToPage(
+                    2,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                child: Container(
+                  width: 61,
+                  height: 50,
+                  decoration: ShapeDecoration(
+                    color: white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
-                ),
-                child: const Center(
-                  child: Text(
-                    'Skip',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w500,
-                      height: 2.5,
+                  child: const Center(
+                    child: Text(
+                      'Skip',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w500,
+                        height: 2.5,
+                      ),
                     ),
                   ),
                 ),
@@ -92,7 +101,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
                   } else {
-                    Get.to(() => const WelcomScreen());
+                    Get.to(() => const HomeScreen());
                   }
                 },
                 text: pageController!.hasClients

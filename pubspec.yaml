@@ -32,7 +32,7 @@ dependencies:
   dots_indicator: ^3.0.0
   flutter:
     sdk: flutter
-  flutter_svg:
+  flutter_svg: 2.0.9
   font_awesome_flutter:
   geolocator:
   get:

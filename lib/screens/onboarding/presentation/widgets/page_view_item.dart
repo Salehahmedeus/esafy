@@ -19,7 +19,7 @@ class PageViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const verticalSpace(value: 0.15),
+        const VerticalSpace(value: 0.15),
         SizedBox(
           height: getSize(context).height * 0.48,
           child: Container(
@@ -32,7 +32,7 @@ class PageViewItem extends StatelessWidget {
             ),
           ),
         ),
-        const verticalSpace(value: 0.005),
+        const VerticalSpace(value: 0.005),
         Text(
           title!,
           textAlign: TextAlign.center,
@@ -44,7 +44,7 @@ class PageViewItem extends StatelessWidget {
             height: 0,
           ),
         ),
-        const verticalSpace(value: 0.025),
+        const VerticalSpace(value: 0.025),
         Text(
           subtitle!,
           textAlign: TextAlign.center,

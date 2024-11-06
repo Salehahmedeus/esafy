@@ -1,5 +1,6 @@
 import 'package:esafy/google_maps/directions_repo.dart';
 import 'package:esafy/google_maps/directions.dart';
+import 'package:esafy/helpers/const.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -170,19 +171,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 //const CustomBottomBar()
               ],
             ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.red,
-        foregroundColor: Colors.white,
-        onPressed: () => _googleMapController.animateCamera(
-          CameraUpdate.newCameraPosition(
-            CameraPosition(
-              target: LatLng(
-                  _currentPosition!.latitude, _currentPosition!.longitude),
-              zoom: 11.6,
+      floatingActionButton: Padding(
+        padding: const EdgeInsets.only(right: 0, bottom: 150),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(50),
+          child: FloatingActionButton(
+            backgroundColor: lightBlack,
+            foregroundColor: lightBlue,
+            onPressed: () => _googleMapController.animateCamera(
+              CameraUpdate.newCameraPosition(
+                CameraPosition(
+                  target: LatLng(
+                      _currentPosition!.latitude, _currentPosition!.longitude),
+                  zoom: 11.6,
+                ),
+              ),
             ),
+            child: const Icon(Icons.my_location_rounded),
           ),
         ),
-        child: const Icon(Icons.center_focus_strong),
       ),
     );
   }

@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all(backgroudcolor),
           padding: WidgetStateProperty.all(
             EdgeInsets.symmetric(
-              horizontal: getSize(context).width * 0.32,
+              horizontal: getSize(context).width * 0.29,
               vertical: getSize(context).height * 0.020,
             ),
           ),
@@ -37,7 +37,7 @@ class Button extends StatelessWidget {
           onPressed();
         },
         child: SizedBox(
-          width: getSize(context).width * 0.22,
+          width: getSize(context).width * 0.24,
           child: Center(
             child: Text(
               title,

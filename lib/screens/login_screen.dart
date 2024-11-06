@@ -2,7 +2,6 @@ import 'package:esafy/helpers/const.dart';
 import 'package:esafy/helpers/get_size.dart';
 import 'package:esafy/providers/auth_provider.dart';
 import 'package:esafy/screens/home_screen.dart';
-import 'package:esafy/screens/welcom_screen.dart';
 import 'package:esafy/widgets/button.dart';
 import 'package:esafy/widgets/custom_text_field.dart';
 import 'package:flutter/cupertino.dart';
@@ -35,41 +34,41 @@ class _RegisterScreenState extends State<LoginScreen> {
                     Stack(children: [
                       Image.asset("assets/chipShape2.png"),
                       Positioned(
-                        top: getSize(context).height * 0.12,
-                        left: getSize(context).width * 0.1,
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 64,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w700,
-                            height: 0,
+                        top: getSize(context).height * 0.14,
+                        left: 0,
+                        right: 0,
+                        child: const Center(
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 40,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w700,
+                              height: 0,
+                            ),
                           ),
                         ),
                       ),
                       Positioned(
                         child: SafeArea(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(12),
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                    context,
-                                    CupertinoPageRoute(
-                                        builder: (context) => const WelcomScreen()));
+                                Navigator.pop(context);
                               },
                               child: Container(
                                   decoration: const BoxDecoration(
                                     borderRadius:
-                                        BorderRadius.all(Radius.circular(10.0)),
-                                    color: cream,
+                                        BorderRadius.all(Radius.circular(12.0)),
+                                    color: white,
                                   ),
-                                  height: getSize(context).height * 0.06,
-                                  width: getSize(context).width * 0.13,
+                                  height: getSize(context).height * 0.070,
+                                  width: getSize(context).width * 0.15,
                                   child: const Icon(
                                     Icons.arrow_back_rounded,
-                                    size: 28,
+                                    size: 30,
                                   )),
                             ),
                           ),
@@ -98,7 +97,7 @@ class _RegisterScreenState extends State<LoginScreen> {
                           'assets/icons/phone2.png',
                           width: 21,
                           height: 20,
-                          color: redColor,
+                          color: const Color.fromARGB(255, 248, 54, 54),
                         ),
                         fontSize: 14,
                         fontWeight: FontWeight.w500),
@@ -115,10 +114,10 @@ class _RegisterScreenState extends State<LoginScreen> {
                           },
                           child: Icon(
                             hidePassword
-                                ? Icons.visibility
-                                : Icons.visibility_off,
+                                ? Icons.visibility_off
+                                : Icons.visibility,
                             size: 16,
-                            color: redColor,
+                            color: const Color.fromARGB(255, 248, 54, 54),
                           ),
                         ),
                         validator: (value) {

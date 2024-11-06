@@ -1,7 +1,6 @@
 import 'package:esafy/providers/auth_provider.dart';
 import 'package:esafy/providers/base_provider.dart';
-import 'package:esafy/screens/splash_screen.dart';
-
+import 'package:esafy/screens/nav_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
         ],
         child: const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          home: NavBar(),
         ));
   }
 }

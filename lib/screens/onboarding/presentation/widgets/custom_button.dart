@@ -61,7 +61,7 @@ class CustomButtonWithIcon extends StatelessWidget {
               iconData,
               color: color,
             ),
-            const horizintalSpace(2),
+            const HorizintalSpace(2),
             Text(
               text,
               style: const TextStyle(

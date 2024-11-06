@@ -14,15 +14,12 @@ class Directions {
     required this.totalDuration,
   });
 
-  // Convert factory constructor to a static function
   factory Directions.fromMap(Map<String, dynamic> map) {
-    // Check if route is not available
     if (map['routes'] == null || (map['routes'] as List).isEmpty) {
       return Directions(
         bounds: LatLngBounds(
-          northeast: const LatLng(
-              0, 0), // Use default values or handle this case appropriately
-          southwest: const LatLng(0, 0),
+          northeast: LatLng(0, 0),
+          southwest: LatLng(0, 0),
         ),
         polylinePoints: [],
         totalDistance: '0',
